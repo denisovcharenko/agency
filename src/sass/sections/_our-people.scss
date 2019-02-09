@@ -1,0 +1,158 @@
+.img-slide-holder{
+  max-width: 400px;
+  margin: 0 auto;
+
+  &:after {
+    content: '';
+    padding-top: 150%;
+    display: block;
+  }
+}
+
+.nav-socials {
+  list-style: none;
+  display: flex;
+  margin: 40px -10px 30px;
+  padding: 0;
+  justify-content: center;
+
+  li {
+    padding: 0 10px;
+  }
+
+  a {
+    font-weight: bold;
+    color: $base-text-color;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s color;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+
+.slide-holder {
+  padding-top: 50px;
+}
+
+.our-people-bottom {
+  .bottom-slide {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      padding-top: 100%;
+      display: block;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+
+      &:hover {
+
+        +.name-holder {
+          transform: translateY(-100%);
+        }
+      }
+    }
+    .name-holder {
+      position: absolute;
+      z-index: 1;
+      top: 101%;
+      left: 0;
+      right: 0;
+      background: $base-text-color;
+      color: $base-text-color-reverse;
+      opacity: .7;
+      text-transform: capitalize;
+      text-align: center;
+      padding: 5px 10px;
+      transition: .3s transform;
+    }
+  }
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.our-people {
+  text-align: center;
+
+  &-top {
+    margin-top: 20px;
+  }
+}
+
+.team-description {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .our-people {
+    text-align: left;
+
+    &-top {
+      margin: 0;
+    }
+  }
+
+  .our-organization {
+    text-align: left;
+  }
+
+  .nav-socials {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape){
+  .team-photo {
+    display: flex;
+  }
+
+  .nav-socials {
+    justify-content: start;
+  }
+
+  .our-people-bottom {
+    .bottom-slide {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .our-people {
+    text-align: left;
+  }
+
+  .nav-socials {
+    justify-content: start;
+  }
+
+
+  .team-description {
+    text-align: left;
+    padding-bottom: 50px;
+  }
+
+  .our-people-bottom {
+    .bottom-slide {
+      margin-bottom: 0;
+    }
+  }
+}

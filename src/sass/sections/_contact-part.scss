@@ -1,0 +1,125 @@
+.contact {
+
+  &-part {
+    text-align: center;
+
+    [type="text"],
+    [type="email"],
+    textarea {
+      margin-bottom: 10px;
+      width: 100%;
+      background-color: #e5e5e5;
+      appearance: none;
+    }
+    button {
+      text-transform: uppercase;
+      font-size: 12px;
+      min-width: 100%;
+    }
+  }
+
+  &-title {
+    margin-bottom: 40px;
+  }
+
+  &-info {
+    background-color: $contact-info-bg;
+    color: $contact-info-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    min-height: 100%;
+    margin-top: 20px;
+    position: relative;
+
+    h3 {
+      text-transform: uppercase;
+      color: $contact-info-color;
+    }
+
+    a {
+      color: $contact-info-color;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+  }
+
+  &-form {
+    margin-bottom: 20px;
+
+    input {
+      margin: 0;
+    }
+  }
+}
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .contact-form {
+      margin-bottom: 0px;
+    }
+
+    .contact {
+
+      &-title {
+        text-align: left;
+      }
+
+      &-info {
+        text-align: left;
+        padding-left: 50px;
+        margin-top: 0;
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          left: 99%;
+          width: 99999px;
+          background-color: $contact-info-bg;
+        }
+      }
+
+      input {
+        margin: 0;
+      }
+
+      &-holder {
+        display: flex;
+        align-self: stretch;
+      }
+    }
+  }
+
+@media (min-width: 1200px) {
+  .contact-form {
+    margin: 0;
+  }
+
+  .contact-info {
+    margin-top: 0;
+    text-align: left;
+    padding-left: 50px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 99%;
+      width: 99999px;
+      background-color: $contact-info-bg;
+    }
+  }
+
+  .contact-title {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+}
+

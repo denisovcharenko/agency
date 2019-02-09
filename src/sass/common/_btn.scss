@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  color: $red;
+  transition: .3s background-color;
+  border: 2px solid $red;
+  border-radius: 5px;
+  padding: 10px 50px;
+  background-color: transparent;
+  &:hover {
+    color: $white;
+    background-color: $red;
+}
+}

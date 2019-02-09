@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Homework</title>
+	<style>
+		.ul-list {
+			max-width: 400px;
+			list-style: none;
+		}
+		ul {
+				text-align: left;
+				padding-left: 20px;
+			}
+		li {
+			position: relative;
+			margin-bottom: 10px;
+		li::before {
+			 content: "";
+			 position: absolute;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 left: -15px;
+			 width: 0;
+			 height: 0;
+			 border-left: 12px solid blue;
+			 border-bottom: 8px solid transparent;
+			 border-top: 8px solid transparent;
+			 padding: 0;
+		 }
+		li::after {
+			 content:"";
+			 position: absolute;
+			 top: 76%;
+			 transform: translateY(-50%);
+			 left: -15px;
+			 height: 6px;
+			 border-left: 11px solid red;
+			 border-bottom: 7px solid transparent;
+			 border-top: 1px solid red;
+		 }
+
+	</style>
+</head>
+<body>
+<div class="ul-list">
+	<h3>h3 title</h3>
+	<ul class="num">
+		<li>   Lorem ipsum dolor sit amet</li>
+		<li>   Lorem ipsum dolor sit amet</li>
+		<li>   Lorem ipsum dolor sit amet</li>
+		<li>   Lorem ipsum dolor sit amet</li>
+	</ul>
+</div>
+</body>
+</html>
